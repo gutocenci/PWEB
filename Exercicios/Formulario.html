@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Formulario PWEB</title>
+	</head>
+<style>
+	label{font-family:Sans-serif;
+		  text-align:left;
+		  text-decoration: underline;}
+
+	body{background-color: lightblue;}
+
+	input[type=text] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+		border: none;
+		border-bottom: 2px solid red;
+	}
+
+	textarea {
+		width: 100%;
+		height: 150px;
+		padding: 12px 20px;
+		box-sizing: border-box;
+		border: 2px solid #ccc;
+		border-radius: 4px;
+		background-color: #f8f8f8;
+		font-size: 16px;
+		resize: none;
+	}
+</style>
+	<body>
+		<form action="/action_page.php">
+
+		  <label>Formulario com inputs basicos</label><br><br>
+			
+		  <label>Digite seu nome:</label><br>
+		  <input type="text" name="nome"><br>
+		  <label>Digite seu RA:</label><br>
+		  <input type="text" name="endereco"><br><br>
+		  
+		  <label>Informe o status da sua matricula:</label><br>
+		  
+		  <input type="radio" name="situacao" value="Matriculado" checked> Matriculado<br>
+		  <input type="radio" name="situacao" value="Matricula"> Trancado<br>
+		  <input type="radio" name="situacao" value="Matricula"> Jubilado<br><br>
+		  
+		  <label>Informações adicionais:</label><br>
+		  
+		  <input type="checkbox" name="vehicle1" value="Bike"> Possuo DP<br>
+		  <input type="checkbox" name="vehicle2" value="Car"> Portador de necessidades especiais<br><br>
+		  
+		  <label>Escolha o seu periodo:</label><br>
+		  
+		  <select>
+		  <option value="Diurno">Diurno</option>
+		  <option value="Noturno">Noturno</option>
+		  <option value="Vespetino">Vespetino</option>
+		  </select><br><br>
+		  
+		  <textarea rows="4" cols="50">
+		  Area de comentario
+		  </textarea><br><br>
+		  
+		  <input type="submit" value="Enviar">
+
+		</form>
+	</body>
+</html>
