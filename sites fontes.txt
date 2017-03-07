@@ -1,0 +1,19 @@
+Ambientes JAVA para desenvolver
+
+https://projects.spring.io/spring-boot/
+http://help.eclipse.org/kepler/index.jsp?topic=%2Forg.eclipse.stardust.docs.wst%2Fhtml%2Fwst-integration%2Fdynamic-web-proj.html
+
+Testes, autmoção de testes
+curso para TDD (testes)
+https://pt.coursera.org/learn/tdd-desenvolvimento-de-software-guiado-por-testes
+ferramentas de testes
+http://junit.org/junit4/
+ambientes baseado em testes
+https://jenkins.io/
+
+Java Serve Faces - FrameWork base que depende de terceiros para ficar bonito e etc...
+
+http://www.oracle.com/technetwork/java/javaee/javaserverfaces-139869.html
+
+Blivlioteca para interface
+http://primefaces.org/

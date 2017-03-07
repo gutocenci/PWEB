@@ -1,0 +1,9 @@
+body {
+	bgcolor="#FF0000";
+}
+fieldset{
+	background: #ebebe0;
+}
+h3 {font-style: italic;}
+
+input {align="center"}

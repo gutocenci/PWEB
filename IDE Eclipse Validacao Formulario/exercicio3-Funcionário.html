@@ -1,0 +1,46 @@
+</head>
+<body>
+<link rel="stylesheet" href="css/MeuCss.css" type="text/css">
+<script language="javascript" type="text/javascript" src="js/Cliente.js"></script>
+	<form name="f1">
+<fieldset>
+		
+		<table>
+		 <tr>
+			<td>Nome: <input type="text" name="nome"
+				 onblur="Nome(f1.nome)" maxlength="60" size='65'>
+			</td>
+			<td>
+				<div id="msgnome"></div>
+			</td>
+		</tr>
+        <tr>
+			<td>E-mail: <input type="text" name="email"
+				onblur="validacaoEmail(f1.email)" maxlength="60" size='65'>
+			</td>
+			<td>
+				<div id="msgemail"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>Data de nascimento: <input type="text" name="data"
+				onblur="validaData(f1.data)" maxlength="10" size='15'>
+			</td>
+			<td>
+				<div id="msgdata"></div>
+			</td>
+		</tr>
+        <tr>
+			<td>Codigo: <input type="text" name="cpf" maxlength="15" size='15' required>
+			</td>
+		</tr>
+        <tr>
+			<td>Setor: <input type="text" name="setor" maxlength="30" size='30' Required>
+			</td>
+		</tr>
+		</table>
+		<input type="submit">
+		</fieldset>
+	</form>
+</body>
+</html>

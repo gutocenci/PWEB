@@ -1,0 +1,54 @@
+</head>
+<body>
+<link rel="stylesheet" href="css/MeuCss.css" type="text/css">
+<script language="javascript" type="text/javascript" src="js/Cliente.js"></script>
+	<form name="f1">
+<fieldset>
+		<h3>Cliente</h3>
+		<table>
+		 <tr>
+			<td>Nome: <input type="text" name="nome"
+				 onblur="Nome(f1.nome)" maxlength="40" size='40' required>
+			</td>
+			<td>
+				<div id="msgnome"></div>
+			</td>
+		</tr>
+        <tr>
+			<td>E-mail: <input type="text" name="email"
+				onblur="validacaoEmail(f1.email)" maxlength="40" size='40' required>
+			</td>
+			<td>
+				<div id="msgemail"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>Data de nascimento: <input type="text" name="data"
+				onblur="validaData(f1.data)" maxlength="8" size='10' required>
+			</td>
+			<td>
+				<div id="msgdata"></div>
+			</td>
+		</tr>
+        <tr>
+			<td>Login: <input type="text" name="login"
+				onblur="Login(f1.login)" maxlength="15" size='10' required>
+			</td>
+			<td>
+				<div id="msglogin"></div>
+			</td>
+		</tr>
+        <tr>
+			<td>Senha: <input type="text" name="senha"
+				onblur="Senha(f1.senha)" maxlength="15" size='10' required>
+			</td>
+			<td>
+				<div id="msgenha"></div>
+			</td>
+		</tr>
+		</table>
+		<input type="submit"  align="center">
+		</fieldset>
+	</form>
+</body>
+</html>
