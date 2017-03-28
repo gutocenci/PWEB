@@ -6,22 +6,20 @@
 	<meta charset="UTF-8" />
 </h:head>
 <h:body>
-	<h1>Cadastro de clientes</h1>
+	<h1>Cadastro de Clientes</h1>
 	<h:form id="formCliente">
 		<p:panelGrid columns="2">
-			<p:outputLabel value="Codigo: " />
-			<p:inputText size="10" value="#{clienteMB.cliente.codigo}" />
 			<p:outputLabel value="Nome: " />
 			<p:inputText size="40" value="#{clienteMB.cliente.nome}" />
 			<p:outputLabel value="Saldo: " />
 			<p:inputText size="15" value="#{clienteMB.cliente.saldo}" />
 		</p:panelGrid>
 		<p:commandButton value="Salvar" action="#{clienteMB.salvar()}"
-			update=":formCliente" />
+			update=":formCliente,:tabCliente" />
 	</h:form>
 
 	<p:dataTable var="cli" value="#{clienteMB.listaCli}" id="tabCliente">
-		<p:column headerText="Codigo">
+		<p:column headerText="Código">
 			<p:outputLabel value="#{cli.codigo}" />
 		</p:column>
 		<p:column headerText="Nome">
@@ -30,7 +28,23 @@
 		<p:column headerText="Saldo">
 			<p:outputLabel value="#{cli.saldo}" />
 		</p:column>
+		<p:gmap center="41.381542, 2.122893" zoom="15" type="HYBRID" style="width:100%;height:400px" />
+		
 	</p:dataTable>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </h:body>
 </html>
