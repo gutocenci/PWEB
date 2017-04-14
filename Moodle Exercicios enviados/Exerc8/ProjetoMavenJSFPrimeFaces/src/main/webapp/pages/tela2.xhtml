@@ -1,0 +1,146 @@
+
+<ui:composition template="templateMenu.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets"
+	>
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.cadastroProduto.title']}" />
+	</ui:define>
+	
+
+	<ui:define name="principal">
+	 	 
+	   	<p:outputLabel value="#{msg['pages.cadastroProduto.menu']}"/>
+	   
+	   <h:form id="formProduto">
+		<p:panelGrid columns="2">
+			
+			<p:outputLabel value="#{msg['pages.cadastroProduto.descricao']}" />			
+			<p:inputText size="70" value="#{produtoBean.produto.descricao}" />
+				
+			<p:outputLabel value="#{msg['pages.cadastroProduto.undMedida']}" />					
+			<p:selectOneMenu value="#{produtoBean.produto.undMedida}"
+				style="width:100">
+				<f:selectItem  itemLabel="#{msg['pages.cadastroProduto.undMedida.quilograma']}" itemValue="Quilograma" />
+				<f:selectItem  itemLabel="#{msg['pages.cadastroProduto.undMedida.litro']}" itemValue="Litro" />
+				<f:selectItem  itemLabel="#{msg['pages.cadastroProduto.undMedida.centimetro']}" itemValue="Centimetro" />
+				<f:selectItem  itemLabel="#{msg['pages.cadastroProduto.undMedida.metro']}" itemValue="Metro" />
+			</p:selectOneMenu>
+			
+			<p:outputLabel value="#{msg['pages.cadastroProduto.perecivel']}"></p:outputLabel>
+			<p:selectOneRadio id="perecivel" value="#{produtoBean.produto.pericivel}">
+				<f:selectItem itemLabel="#{msg['pages.cadastroProduto.perecivel.sim']}" itemValue="Sim" />
+				<f:selectItem itemLabel="#{msg['pages.cadastroProduto.perecivel.nao']}" itemValue="Não" />
+			</p:selectOneRadio>
+			
+			<p:outputLabel value="#{msg['pages.cadastroProduto.fornecedor']}" />
+			<p:selectOneMenu value="#{produtoBean.produto.fornecedor}"
+				style="width:100px">
+				<f:selectItem itemLabel="Extra" itemValue="Extra" />
+				<f:selectItem itemLabel="Carrefour" itemValue="Carrefour" />
+				<f:selectItem itemLabel="Paula Souza" itemValue="Paula Souza" />
+				<f:selectItem itemLabel="Dia" itemValue="Dia" />
+				<f:selectItem itemLabel="Pereira" itemValue="Pereira" />
+				<f:selectItem itemLabel="Paulistano" itemValue="Paulistano" />
+			</p:selectOneMenu>
+			
+		</p:panelGrid>
+		<br/>
+		<p:commandButton value="Salvar" action="#{produtoBean.salvar}"
+			update=":formProduto,:formTabPro" />
+	</h:form>	
+	
+	 <h:form id="formTabPro">
+	<p:dataTable var="pro" 
+	             value="#{produtoBean.listaProduto}"
+	             id="tabProduto" 
+	             editable="true">
+		
+		 <p:ajax event="rowEdit" 
+		         listener="#{produtoBean.onRowEdit}" 
+		         update=":formTabPro:tabProduto" />
+		
+		<p:column headerText="#{msg['pages.cadastroProduto.codigo']}">
+			<p:outputLabel value="#{pro.codigo}" />
+		</p:column>
+		
+		<p:column headerText="#{msg['pages.cadastroProduto.descricao']}">
+				<p:cellEditor>
+				 	<f:facet name="output">
+						<p:outputLabel value="#{pro.descricao}" />
+					</f:facet>
+					<f:facet name="input">
+						<p:inputText id="descricaoProduto" value="#{pro.descricao}"
+							style="width:100%" />
+					</f:facet>
+				</p:cellEditor>
+		</p:column>
+
+		<p:column headerText="#{msg['pages.cadastroProduto.undMedida']}">
+			<p:cellEditor>
+				 	<f:facet name="output">
+					   <p:outputLabel value="#{pro.undMedida}" />
+					</f:facet>
+					<f:facet name="input">
+						<p:inputText id="undMedidaProduto" value="#{pro.undMedida}"
+							style="width:100%" />
+					</f:facet>
+				</p:cellEditor>
+		</p:column>
+
+		<p:column headerText="#{msg['pages.cadastroProduto.fornecedor']}">
+			<p:cellEditor>
+				 	<f:facet name="output">
+					   <p:outputLabel value="#{pro.fornecedor}" />
+					</f:facet>
+					<f:facet name="input">
+						<p:inputText id="fornecedorProduto" value="#{pro.fornecedor}"
+							style="width:100%" />
+					</f:facet>
+				</p:cellEditor>
+		</p:column>
+		
+		<p:column headerText="#{msg['pages.cadastroProduto.perecivel']}">
+			<p:cellEditor>
+				 	<f:facet name="output">
+					   <p:outputLabel value="#{pro.pericivel}" />
+					</f:facet>
+					<f:facet name="input">
+						<p:inputText id="pericivelProduto" value="#{pro.pericivel}"
+							style="width:100%" />
+					</f:facet>
+				</p:cellEditor>
+		</p:column>
+
+		<p:column style="width:70px" headerText="Opções">
+
+			<p:rowEditor />
+
+			<p:commandLink 
+			    id="remover" 
+			    styleClass="ui-icon ui-icon-trash"
+				style="text-align:center"
+				actionListener="#{produtoBean.remover(pro)}"
+				update=":formTabPro" />
+		</p:column>
+
+	</p:dataTable>
+	</h:form>
+	
+	   
+	</ui:define>
+	
+	
+	
+</ui:composition>
+
+
+
+
+
+

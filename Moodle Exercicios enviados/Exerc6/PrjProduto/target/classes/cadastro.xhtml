@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core" >
+<h:head>
+	<meta charset="UTF-8" />
+</h:head>
+<h:body>
+	<h1>Cadastro Produto</h1>
+	<h:form id="formProduto">
+		<p:panelGrid columns="2">
+			<p:outputLabel value="Código: " />
+			<p:inputText size="10" value="#{produtoMB.produto.codigo}" />
+			<p:outputLabel value="Nome: " />
+			<p:inputText size="40" value="#{produtoMB.produto.nome}" />
+			<p:outputLabel value="Validade: " />
+			<p:selectOneMenu value="#{produtoMB.produto.validade}">
+				<f:selectItem itemLabel="mês" itemValue="1" />
+				<f:selectItem itemLabel="semestre" itemValue="6" />
+				<f:selectItem itemLabel="ano" itemValue="12" />
+			</p:selectOneMenu>
+			<p:outputLabel value="Quantidade minima: " />
+			<p:inputText size="15" value="#{produtoMB.produto.qtdemin}" />
+			<p:outputLabel value="Fornecedor: " />
+			<p:inputText size="15" value="#{produtoMB.produto.fornecedor}" />
+		</p:panelGrid>
+		<p:commandButton value="Salvar" action="#{produtoMB.salvar()}"
+			update=":formProduto,:tabProduto" />
+	</h:form>
+
+	<p:dataTable var="prod" value="#{produtoMB.listaProd}" id="tabProduto">
+		<p:column headerText="Código">
+			<p:outputLabel value="#{prod.codigo}" />
+		</p:column>
+		<p:column headerText="Nome">
+			<p:outputLabel value="#{prod.nome}" />
+		</p:column>
+		<p:column headerText="Validade">
+			<p:outputLabel value="#{prod.saldo}" />
+		</p:column>
+		<p:column headerText="Quantidade Minima">
+			<p:outputLabel value="#{prod.qtdmin}" />
+		</p:column>
+		<p:column headerText="Fornecedor">
+			<p:outputLabel value="#{prod.fornecedor}" />
+		</p:column>
+	</p:dataTable>
+</h:body>
+</html>

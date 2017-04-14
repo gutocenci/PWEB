@@ -1,0 +1,5 @@
+Cadastrar produtos em um BD 
+
+Um produto deve possuir no mínimo 5 informações.
+
+Usar obrigatoriamente um componente diferente do InputText do PrimeFaces para fazer a entrada de dados no xhtml

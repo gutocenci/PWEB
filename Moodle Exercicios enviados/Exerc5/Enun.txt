@@ -1,0 +1,5 @@
+Desenvolver um cadastro de aluno. 
+
+Um aluno deve possuir 4 informações
+
+Usar uma tabela para mostrar todos os alunos

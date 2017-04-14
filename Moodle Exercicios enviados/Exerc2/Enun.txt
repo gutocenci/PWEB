@@ -1,0 +1,9 @@
+Construir um formulário HTML que permita receber os dados de um cliente qualquer.
+
+Usar os seguintes tipos de input: text, radio, checkbox e submit.
+
+Usar as tags textarea e select.
+
+Usar a tag label.
+
+Usar CSS internal

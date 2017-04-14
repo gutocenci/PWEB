@@ -1,0 +1,13 @@
+Crie uma tabela com borda HTML com 4 linhas e 3 colunas, com as seguintes características:
+
+1. Use CSS inline e internal.
+
+2. Use um destaque h2 na cor Laranja
+
+3. Background do documento cinza claro.
+
+4. Cabeçalho da tabela na cor  #33cc33 e tamanho da fonte 42px.
+
+5. Uma das linhas da tabela possui somente imagens.
+
+6. Background da tabela na cor amarelo.

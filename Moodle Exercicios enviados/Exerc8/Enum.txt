@@ -1,0 +1,7 @@
+Clonar o repoositório: https://github.com/glaucotodesco/POO-II-1Sem2016
+
+Usar o branch  Aula01 como referência (O mesmo que foi explicado em sala de aula no dia 03/04).
+
+Adaptar o exercício 7 (Cadastro de Produto) dentro do projeto proposto (usando banco de dados).
+
+Inserir um novo item de menu e definir os arquivos de propriedades em Inglês e Português.

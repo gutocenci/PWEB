@@ -1,0 +1,10 @@
+Crie um menu que chame 3 telas:
+
+Cadastro de Clientes
+Cadastro de Produtos
+Cadastro de Funcionários
+Defina para cada tela um formulário HTML para cadastrar as informações com pelo menos 5 dados.
+
+Use CSS externo para definir o estilo de todas as páginas. Modifique o CSS de exemplo!!!
+
+Use JS externo para validar as informações básicas como: email, telefone, cpf, etc..
